@@ -1,0 +1,44 @@
+import React, { Component } from "react";
+import { View, Text , StyleSheet} from "react-native";
+
+class App extends Component {
+  render() {
+
+// flex: Permite que o componente se expanda e encolha dinamicamente com base no espaço disponível
+
+return (
+  
+    <View style={styles.container}>
+      <Text style={styles.vermelho}>Vermelho</Text>
+      <Text style={styles.azul}>Azul</Text>
+    </View>
+  );
+  }
+
+}
+
+const styles = StyleSheet.create({
+  container: {
+    marginTop: 50,
+  },
+  azul: {
+    color: 'blue',
+    fontWeight: 'bold',
+    fontSize: 30,
+  },
+  vermelho: {
+    color: 'red',
+    fontSize: 30,
+  },
+});
+
+
+// O React Native permite o usuo do Hue Saturation Lightness (HSL)
+// hsl(360, 100%, 100%)
+// hsla(360, 100%, 100%, 1.0)
+
+// Aceita também o 'transparent', que é o atalho para rgba(0,0,0,0).
+//
+
+
+export default App; 

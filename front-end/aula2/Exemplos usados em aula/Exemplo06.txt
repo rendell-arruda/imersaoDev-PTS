@@ -1,0 +1,34 @@
+import React, { Component } from "react";
+import { View, Text , StyleSheet} from "react-native";
+
+class App extends Component {
+  render() {
+
+
+return (
+  <View style={[styles.container]}>
+   <View style={[styles.box, { backgroundColor: "powderblue" }]}/>
+   <View style={[styles.box, { backgroundColor: "skyblue" }]} />
+   <View  style={[styles.box, { backgroundColor: "steelblue" }]} />
+</View>
+  );
+  }
+
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    flexDirection: "row", // // Podemos usar column , que é o valor padrão, ou column-reverse, ou row-reverse.
+    marginTop: 8,
+    backgroundColor: "aliceblue",
+
+  },
+  box: {    
+    width: 50,
+    height: 50,
+  },
+});
+
+
+export default App; 

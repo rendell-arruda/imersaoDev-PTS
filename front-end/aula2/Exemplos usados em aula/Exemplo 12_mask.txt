@@ -1,0 +1,54 @@
+import React, { Component } from "react";
+import { View, SafeAreaView, Text, TextInput , StyleSheet, Image} from "react-native";
+import { MaskedTextInput} from "react-native-mask-text";
+
+
+
+class App extends Component {
+  
+  constructor(props) {
+    super(props);
+    this.state = {cep: ''};
+  }
+
+  render() {
+
+
+return (
+  
+    
+    <SafeAreaView style={styles.container}>
+      
+
+      <Text>Exemplos de caixas de texto</Text>
+      <MaskedTextInput
+        mask="99999-999"
+        style={styles.input}
+        
+        onChangeText={(cep) => this.setState({cep})}
+      />
+      <Text>Texto Digitado: {this.state.cep}</Text>
+     
+    </SafeAreaView>
+  
+  );
+  }
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    paddingTop:40,
+  },
+  input: {
+    height: 40,
+    width:200,
+    margin: 12,
+    borderWidth: 1,
+    
+  },
+  
+});
+
+
+export default App; 
