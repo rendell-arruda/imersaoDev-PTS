@@ -1,0 +1,59 @@
+import React, { Component } from "react";
+import { View, Button, SafeAreaView, Text, TouchableOpacity, TextInput , StyleSheet, Image, Alert} from "react-native";
+
+class App extends Component {
+  
+   render() {
+
+return (
+      
+  <View style={styles.container}>
+
+  <TouchableOpacity
+    onPress={() => alert('Hello, world!')}
+    style={styles.TouchableOpacityStyle}>
+    <Text style={{ fontSize: 20, color: '#fff', alignSelf:'center' }}>Um simples botão</Text>
+  </TouchableOpacity>
+</View>
+  
+  );
+  }
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  logo: {
+    width: 305,
+    height: 159,
+    marginBottom: 20,
+  },
+  instructions: {
+    color: '#888',
+    fontSize: 18,
+    marginHorizontal: 15,
+    marginBottom: 10,
+  },
+  TouchableOpacityStyle:
+  {
+    paddingTop: 10,
+    paddingBottom: 10,
+    backgroundColor: 'blue',
+    marginBottom: 20,
+    width: '70%',
+    height: 80,
+    marginHorizontal: 7,
+    justifyContent: 'center',
+    borderRadius: 60,
+    borderColor: '#008B8B',
+    borderWidth: 2,
+  },
+});
+
+
+export default App; 
+
