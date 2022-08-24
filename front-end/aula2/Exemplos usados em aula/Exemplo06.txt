@@ -18,7 +18,7 @@ return (
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
+    flex: 1, // o container esta usando toda a area da tela
     flexDirection: "row", // // Podemos usar column , que é o valor padrão, ou column-reverse, ou row-reverse.
     marginTop: 8,
     backgroundColor: "aliceblue",
