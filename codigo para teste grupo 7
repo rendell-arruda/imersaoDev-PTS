@@ -1,0 +1,62 @@
+import React, { Component } from 'react'
+import { View, Text, Image, StyleSheet, TouchableOpacity } from 'react-native'
+import { LinearGradient } from 'expo-linear-gradient'
+
+export default function App() {
+  return (
+    <View style={styles.container}>
+      <LinearGradient
+        colors={['#BF96E1', '#AD74F4', '#CCC4F5']}
+        style={styles.background}
+      >
+        <View style={styles.decoContainer}>
+          <View style={styles.decoContainerLeft}>
+            <Image style={styles.decoLeft} source={require('./assets/decoLeft.png')} />
+          </View>
+          <View style={styles.decoContainerRight}>
+            <Image style={styles.decoRight} source={require('./assets/decoRight.png')} />
+          </View>
+        </View>
+      </LinearGradient>
+    </View>
+  )
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center'
+  },
+  background: {
+    position: 'absolute',
+    height: '100%',
+    width: '100%',
+  },
+  decoContainer: {
+
+  },
+
+  decoContainerLeft: {
+    width: '10%',
+    height: 20
+  },
+  decoLeft: {
+    marginLeft: 0,
+    width: 250,
+    height: 450,
+  },
+
+  decoContainerRight: {
+    left: '50%',
+    width: 212,
+    height: 533
+  },
+  decoRight: {
+    top: -19,
+    width: 290,
+    height: 320,
+
+  }
+
+})
