@@ -1,14 +1,14 @@
-// nossa primeira API
-// vamos usar um modulo interno do Node js chamado http
+// nossa primeira API - são os dados
+// vamos usar um modulo interno do Node js chamado HTTP(caminho que trafega a API)
 
 // em JS, em node.js, require significa que esta requerendo/importando o modulo
-
 var http = require('http')
 
 // nesse momento ja temos modulo, e devemos simular um servidor para receber e mandar uma requisicao http
 
 //funcao para representar um servidor
 //requisicao e resposta
+
 function server(request, response) {
   //resposta com status 200 é pq deu bao
   response.writeHead(200, { 'Content-Type': 'application/json' })
