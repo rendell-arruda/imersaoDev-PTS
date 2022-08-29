@@ -1,0 +1,23 @@
+import React, { Component } from 'react';
+import { AppRegistry, Text, View } from 'react-native';
+class Ola extends Component {
+  render() {
+    return (
+      <View style={{alignItems: 'center'}}>
+        <Text>Olá {this.props.name}! Lembra que me deve R$ {this.props.valor} </Text>
+      </View>
+    );
+  }
+}
+export default class Lista_de_Amigos extends Component {
+  render() {
+    return (
+      <View style={{alignItems: 'center', top: 50}}>
+        <Ola name='Maria' valor='70'/>
+        <Ola name='Juca' valor='60' />
+        <Ola name='Gervanio' valor='50'/>
+        <Ola name='Pablito' valor='40'/>
+      </View>
+    );
+  }
+}

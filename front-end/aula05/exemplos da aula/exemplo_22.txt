@@ -1,0 +1,36 @@
+import React, { Component } from 'react';
+import { Text, View } from 'react-native';
+class Blink extends Component {
+    componentDidMount(){
+    // Toggle the state every second
+        setInterval(() => (
+          this.setState(previousState => (
+            { isShowingText: !previousState.isShowingText }
+          ))
+        ), 1000);
+     }
+    //state object
+    state = { isShowingText: true };
+  render() {
+    if (!this.state.isShowingText) {
+      return null;
+    }
+    return (
+      <View style={{alignSelf:'center'}}>
+      <Text>
+      </Text>
+      <Text>{this.props.texto}</Text>
+      </View>
+    );
+  }
+}
+export default class piscante extends Component {
+  render() {
+    return (
+      <View>
+        <Blink texto='Treinamento' />
+        <Blink texto='Iniciando em React Native' />
+      </View>
+    );
+  }
+}

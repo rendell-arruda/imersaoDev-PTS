@@ -1,0 +1,44 @@
+Exemplo 23 - Calcular o IMC
+import React, { Component } from 'react';
+import { Text, TextInput, View } from 'react-native';
+export default class Digitar extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {peso: '1'};
+    this.state = {altura: '1'};
+  }
+  render() {
+    let s=Math.round(this.state.peso / Math.pow(this.state.altura,2)*100)/100;
+    if (s==isNaN) s=1;
+    let resultado='';
+    if (s<18) resultado='Abaixo do peso';
+    if (s>18 && s<=25) resultado='Peso normal';
+    if (s>25 && s<=35) resultado='Sobrepeso';
+    if (s>35 && s<=40) resultado='Obesidade';
+    if (s>40) resultado='Obesidade grau 3';
+    return (
+      <View style={{padding: 10}}>
+        <Text> </Text>
+        <Text>Calculadora IMC </Text>
+        <TextInput
+          keyboardType='numeric'
+          style={{height: 40 }}
+          placeholder="Digite seu peso"
+          onChangeText={(peso) => this.setState({peso})}
+        />
+        <TextInput
+          keyboardType='numeric'
+          style={{height: 40}}
+          placeholder="Digite sua altura"
+          onChangeText={(altura) => this.setState({altura})}
+        />
+        <Text style={{padding: 10, fontSize: 24}}>
+          Seu IMC = {s}
+        </Text>
+        <Text style={{padding: 10, fontSize: 42}}>
+          Resultado = {resultado}
+        </Text>
+      </View>
+    );
+  }
+}

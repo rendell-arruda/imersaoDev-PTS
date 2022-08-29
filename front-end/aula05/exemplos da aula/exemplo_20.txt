@@ -1,0 +1,22 @@
+import React, { Component } from 'react';
+import { AppRegistry, Image, Text, View } from 'react-native';
+export default class Parque extends Component {
+  render() {
+    let ano_atual=2019;
+    let ano_nascimento=1987;
+    let nome='Juca';
+    let cidade="Sorocaba";
+    return (
+      <View style={{alignSelf:'center'}}>
+      <Text></Text>
+      <Text></Text>
+      <Text>Dados do {nome}</Text>
+      <Text>Nome: {nome}</Text>
+      <Text>Cidade: {cidade}</Text>
+      <Text>Idade: {ano_atual-ano_nascimento}</Text>
+      </View>
+    );
+  }
+}
+// skip this line if using Create React Native App
+AppRegistry.registerComponent('App.js', () => Parque);
