@@ -11,15 +11,36 @@ import {
   Image,
   Alert
 } from 'react-native'
-import App2 from './App2'
+import FontAwesome from '@expo/vector-icons/FontAwesome'
 
+// https://fontawesome.com/icons
 class App extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Pressable style={styles.button} onPress={() => App2}>
-          <Text style={styles.text}>Pressable</Text>
-        </Pressable>
+        <FontAwesome.Button
+          name="facebook"
+          backgroundColor="#3b5998"
+          onPress={() => alert('Hello, world!')}
+        >
+          Login com Facebook
+        </FontAwesome.Button>
+        <Text> </Text>
+        <FontAwesome.Button
+          name="apple"
+          backgroundColor="black"
+          onPress={() => alert('Hello, world!')}
+        >
+          Login com Apple
+        </FontAwesome.Button>
+        <Text> </Text>
+        <FontAwesome.Button
+          name="whatsapp"
+          backgroundColor="green"
+          onPress={() => alert('Hello, world!')}
+        >
+          Enviar whatsapp
+        </FontAwesome.Button>
       </View>
     )
   }
